@@ -1,0 +1,331 @@
+\hypertarget{group__unboxer}{
+\subsection{Unboxer}
+\label{group__unboxer}\index{Unboxer@{Unboxer}}
+}
+
+
+Unbox sampled frames.
+
+The unboxer is responsible for decoding digital and analoge data from sampled frames. This provides the top level API for decoding frames.  
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structboxing__unboxer__parameters__s}{boxing\_\-unboxer\_\-parameters\_\-s}
+\begin{DoxyCompactList}\small\item\em Unboxer configuration. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structboxing__unboxing__codec__info__s}{boxing\_\-unboxing\_\-codec\_\-info\_\-s}
+\begin{DoxyCompactList}\small\item\em Codec info. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boxing\_\-image8 $\ast$($\ast$ \hyperlink{group__unboxer_gad341bfd9895ae5c55c2697a388a898ce}{boxing\_\-sample\_\-cb} )(void $\ast$user, const boxing\_\-image8 $\ast$frame, const boxing\_\-matrixf $\ast$location\_\-matrix, DBOOL $\ast$state)
+\begin{DoxyCompactList}\small\item\em Boxing sample callback function. \item\end{DoxyCompactList}\item 
+typedef gvector $\ast$($\ast$ \hyperlink{group__unboxer_gac0f9cec0fc7b0ad34eaf5bad8b017cf9}{boxing\_\-quantize\_\-cb} )(void $\ast$user, const boxing\_\-image8 $\ast$image, int block\_\-width, int block\_\-height, int bins)
+\begin{DoxyCompactList}\small\item\em Boxing quantize callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_gabdf338be152e0494e1e3da7a73164c59}{boxing\_\-tracker\_\-created\_\-cb} )(void $\ast$user, int $\ast$res, boxing\_\-tracker $\ast$tracker)
+\begin{DoxyCompactList}\small\item\em Boxing tracker created callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_gae52c4aa9002423b4b7d1f15e2fe56f3f}{boxing\_\-reference\_\-bar\_\-complete\_\-cb} )(void $\ast$user, int $\ast$res, boxing\_\-stats\_\-mtf $\ast$stats)
+\begin{DoxyCompactList}\small\item\em Boxing reference bar complete callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_ga330e695e728124040d50ed2e615018f9}{boxing\_\-metadata\_\-complete\_\-cb} )(void $\ast$user, int $\ast$res, boxing\_\-metadata\_\-list $\ast$meta\_\-data)
+\begin{DoxyCompactList}\small\item\em Boxing metadata complete callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_gade5396bcb001d9594974e76edcd22343}{boxing\_\-content\_\-sampled\_\-cb} )(void $\ast$user, int $\ast$res, boxing\_\-image8 $\ast$image, void $\ast$sampler\_\-list)
+\begin{DoxyCompactList}\small\item\em Boxing content sampled callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_ga200ab55a4d8302d501a8964ec5941e10}{boxing\_\-content\_\-quantized\_\-cb} )(void $\ast$user, int $\ast$res, char $\ast$data, int size)
+\begin{DoxyCompactList}\small\item\em Boxing content quantized callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_gaaafcc2fdb11841b10ab6adb26b06eb09}{boxing\_\-training\_\-complete\_\-cb} )(void $\ast$user, int $\ast$res, void $\ast$training\_\-result)
+\begin{DoxyCompactList}\small\item\em Boxing training complete callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_gaa152af7889b62277c3cd7dae89fd94a6}{boxing\_\-decode\_\-step\_\-cb} )(void $\ast$user, int $\ast$res, void $\ast$data, int data\_\-size, int step, int is\_\-codec\_\-errorcorrecting, int parity\_\-size, int block\_\-size)
+\begin{DoxyCompactList}\small\item\em Boxing decode step callback function. \item\end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__unboxer_ga26d1d88b45ca8c86a13af64e4dd4830b}{boxing\_\-all\_\-complete\_\-cb} )(void $\ast$user, int $\ast$res, boxing\_\-stats\_\-decode $\ast$stats)
+\begin{DoxyCompactList}\small\item\em Unoxing complete callback function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__unboxer_ga6c7b8f994da998dcd78b154856064ca6}{boxing\_\-unboxer\_\-result} 
+\begin{DoxyCompactList}\small\item\em Unboxing result. \item\end{DoxyCompactList}\item 
+enum \hyperlink{group__unboxer_gae2e6edbb6bac239133f13aa8164984e3}{boxing\_\-process\_\-callback\_\-result} 
+\begin{DoxyCompactList}\small\item\em Processing callback result. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+boxing\_\-unboxer $\ast$ \hyperlink{group__unboxer_gac2e6043a93bbf6541d50332dbf86b471}{boxing\_\-unboxer\_\-create} (\hyperlink{structboxing__unboxer__parameters__s}{boxing\_\-unboxer\_\-parameters} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em Create unboxer. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__unboxer_ga754c1c3545803289577a78169af12ca0}{boxing\_\-unboxer\_\-free} (boxing\_\-unboxer $\ast$unboxer)
+\begin{DoxyCompactList}\small\item\em Free unboxer data. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__unboxer_gaa35a6cc3bb000da1ae59f1d99fefe488}{boxing\_\-unboxer\_\-set\_\-raw\_\-input} (boxing\_\-unboxer $\ast$unboxer, int is\_\-raw)
+\begin{DoxyCompactList}\small\item\em Enable/disable RAW input images. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__unboxer_ga7b80bcde9d5f997789229978003439c7}{boxing\_\-unboxer\_\-is\_\-raw\_\-input} (boxing\_\-unboxer $\ast$unboxer)
+\begin{DoxyCompactList}\small\item\em Get RAW mode. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__unboxer_ga8ae669c445fbfae38b44931e2572f0ba}{boxing\_\-unboxer\_\-codec\_\-info} (const boxing\_\-unboxer $\ast$unboxer, int step, \hyperlink{structboxing__unboxing__codec__info__s}{boxing\_\-codec\_\-info} $\ast$info)
+\begin{DoxyCompactList}\small\item\em Get the codec information. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{group__unboxer_gab8716d553639132ce7fc268c4c7a2c50}{boxing\_\-unboxer\_\-decoding\_\-steps} (const boxing\_\-unboxer $\ast$unboxer)
+\begin{DoxyCompactList}\small\item\em Get the number of decoding steps. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__unboxer_ga16c59852a340d2d593efb5beec2ac5b2}{boxing\_\-unboxer\_\-reset} (const boxing\_\-unboxer $\ast$unboxer)
+\begin{DoxyCompactList}\small\item\em Reset the unboxer. \item\end{DoxyCompactList}\item 
+enum \hyperlink{group__unboxer_ga6c7b8f994da998dcd78b154856064ca6}{boxing\_\-unboxer\_\-result} \hyperlink{group__unboxer_gabdb1dfbc5aa0dc72aa2f75a62acb827d}{boxing\_\-unboxer\_\-unbox\_\-extract\_\-container} (gvector $\ast$data, boxing\_\-metadata\_\-list $\ast$metadata, boxing\_\-image8 $\ast$image, boxing\_\-unboxer $\ast$unboxer, void $\ast$user\_\-data)
+\begin{DoxyCompactList}\small\item\em Extract data container. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__unboxer_gaeba1508d04d3ba66f4ec5acd2ea71244}{boxing\_\-unboxer\_\-decode} (boxing\_\-unboxer $\ast$unboxer, gvector $\ast$data, boxing\_\-metadata\_\-list $\ast$metadata, boxing\_\-stats\_\-decode $\ast$decode\_\-stats, unsigned int step, void $\ast$user\_\-data)
+\begin{DoxyCompactList}\small\item\em Decode data. \item\end{DoxyCompactList}\item 
+enum \hyperlink{group__unboxer_ga6c7b8f994da998dcd78b154856064ca6}{boxing\_\-unboxer\_\-result} \hyperlink{group__unboxer_ga832bea46817eb5b565687abc0d7635fd}{boxing\_\-unboxer\_\-unbox} (gvector $\ast$data, boxing\_\-metadata\_\-list $\ast$metadata, boxing\_\-image8 $\ast$image, boxing\_\-unboxer $\ast$unboxer, int $\ast$extract\_\-result, void $\ast$user\_\-data)
+\begin{DoxyCompactList}\small\item\em Decode image. \item\end{DoxyCompactList}\item 
+boxing\_\-codecdispatcher $\ast$ \hyperlink{group__unboxer_gacef2db1849f3d7e1e718cf8bdae2a302}{boxing\_\-unboxer\_\-dispatcher} (boxing\_\-unboxer $\ast$unboxer, const char $\ast$coding\_\-scheme)
+\begin{DoxyCompactList}\small\item\em Dispatcher function. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__unboxer_ga98551069c5b6d815ea59fab7a4ac4040}{boxing\_\-unboxer\_\-parameters\_\-init} (\hyperlink{structboxing__unboxer__parameters__s}{boxing\_\-unboxer\_\-parameters} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em Initialize unboxer parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__unboxer_gaa4015256c5bc7f8e1f359a583117c792}{boxing\_\-unboxer\_\-parameters\_\-free} (\hyperlink{structboxing__unboxer__parameters__s}{boxing\_\-unboxer\_\-parameters} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em Free unboxing parameters data. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Typedef Documentation}
+\hypertarget{group__unboxer_ga26d1d88b45ca8c86a13af64e4dd4830b}{
+\index{unboxer@{unboxer}!boxing\_\-all\_\-complete\_\-cb@{boxing\_\-all\_\-complete\_\-cb}}
+\index{boxing\_\-all\_\-complete\_\-cb@{boxing\_\-all\_\-complete\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-all\_\-complete\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-all\_\-complete\_\-cb})(void $\ast$user, int $\ast$res, boxing\_\-stats\_\-decode $\ast$stats)}\hfill}
+\label{group__unboxer_ga26d1d88b45ca8c86a13af64e4dd4830b}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em stats}]Decode statistic.\end{DoxyParams}
+Last callback from unboxing. \hypertarget{group__unboxer_ga200ab55a4d8302d501a8964ec5941e10}{
+\index{unboxer@{unboxer}!boxing\_\-content\_\-quantized\_\-cb@{boxing\_\-content\_\-quantized\_\-cb}}
+\index{boxing\_\-content\_\-quantized\_\-cb@{boxing\_\-content\_\-quantized\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-content\_\-quantized\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-content\_\-quantized\_\-cb})(void $\ast$user, int $\ast$res, char $\ast$data, int size)}\hfill}
+\label{group__unboxer_ga200ab55a4d8302d501a8964ec5941e10}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em data}]Data. \item[\mbox{$\leftarrow$} {\em size}]Size.\end{DoxyParams}
+Called when iamge quantize (conversion from sampled pixels to symbols) is complete. \hypertarget{group__unboxer_gade5396bcb001d9594974e76edcd22343}{
+\index{unboxer@{unboxer}!boxing\_\-content\_\-sampled\_\-cb@{boxing\_\-content\_\-sampled\_\-cb}}
+\index{boxing\_\-content\_\-sampled\_\-cb@{boxing\_\-content\_\-sampled\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-content\_\-sampled\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-content\_\-sampled\_\-cb})(void $\ast$user, int $\ast$res, boxing\_\-image8 $\ast$image, void $\ast$sampler\_\-list)}\hfill}
+\label{group__unboxer_gade5396bcb001d9594974e76edcd22343}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em image}]Image. \item[\mbox{$\leftarrow$} {\em sampler\_\-list}]Sampler list.\end{DoxyParams}
+Called when image content is sampled (location of each content pixel is found). \hypertarget{group__unboxer_gaa152af7889b62277c3cd7dae89fd94a6}{
+\index{unboxer@{unboxer}!boxing\_\-decode\_\-step\_\-cb@{boxing\_\-decode\_\-step\_\-cb}}
+\index{boxing\_\-decode\_\-step\_\-cb@{boxing\_\-decode\_\-step\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-decode\_\-step\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-decode\_\-step\_\-cb})(void $\ast$user, int $\ast$res, void $\ast$data, int data\_\-size, int step, int is\_\-codec\_\-errorcorrecting, int parity\_\-size, int block\_\-size)}\hfill}
+\label{group__unboxer_gaa152af7889b62277c3cd7dae89fd94a6}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em data}]Data. \item[\mbox{$\leftarrow$} {\em data\_\-size}]Data size. \item[\mbox{$\leftarrow$} {\em step}]Current step. \item[\mbox{$\leftarrow$} {\em is\_\-codec\_\-errorcorrecting}]Codec error correcting sign. \item[\mbox{$\leftarrow$} {\em parity\_\-size}]Parity size. \item[\mbox{$\leftarrow$} {\em block\_\-size}]Block size.\end{DoxyParams}
+Codec decode step complete callback. \hypertarget{group__unboxer_ga330e695e728124040d50ed2e615018f9}{
+\index{unboxer@{unboxer}!boxing\_\-metadata\_\-complete\_\-cb@{boxing\_\-metadata\_\-complete\_\-cb}}
+\index{boxing\_\-metadata\_\-complete\_\-cb@{boxing\_\-metadata\_\-complete\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-metadata\_\-complete\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-metadata\_\-complete\_\-cb})(void $\ast$user, int $\ast$res, boxing\_\-metadata\_\-list $\ast$meta\_\-data)}\hfill}
+\label{group__unboxer_ga330e695e728124040d50ed2e615018f9}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em meta\_\-data}]Decoded metadata items.\end{DoxyParams}
+Called when metadata decoding is complete. \hypertarget{group__unboxer_gac0f9cec0fc7b0ad34eaf5bad8b017cf9}{
+\index{unboxer@{unboxer}!boxing\_\-quantize\_\-cb@{boxing\_\-quantize\_\-cb}}
+\index{boxing\_\-quantize\_\-cb@{boxing\_\-quantize\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-quantize\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}gvector $\ast$($\ast$ {\bf boxing\_\-quantize\_\-cb})(void $\ast$user, const boxing\_\-image8 $\ast$image, int block\_\-width, int block\_\-height, int bins)}\hfill}
+\label{group__unboxer_gac0f9cec0fc7b0ad34eaf5bad8b017cf9}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em image}]Image. \item[\mbox{$\leftarrow$} {\em block\_\-width}]Block width. \item[\mbox{$\leftarrow$} {\em block\_\-height}]Block height. \item[\mbox{$\leftarrow$} {\em bins}]Bins.\end{DoxyParams}
+Called before quantizing starts. \hypertarget{group__unboxer_gae52c4aa9002423b4b7d1f15e2fe56f3f}{
+\index{unboxer@{unboxer}!boxing\_\-reference\_\-bar\_\-complete\_\-cb@{boxing\_\-reference\_\-bar\_\-complete\_\-cb}}
+\index{boxing\_\-reference\_\-bar\_\-complete\_\-cb@{boxing\_\-reference\_\-bar\_\-complete\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-reference\_\-bar\_\-complete\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-reference\_\-bar\_\-complete\_\-cb})(void $\ast$user, int $\ast$res, boxing\_\-stats\_\-mtf $\ast$stats)}\hfill}
+\label{group__unboxer_gae52c4aa9002423b4b7d1f15e2fe56f3f}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em stats}]MTF statistics.\end{DoxyParams}
+Called when reference bar tracking is complete. \hypertarget{group__unboxer_gad341bfd9895ae5c55c2697a388a898ce}{
+\index{unboxer@{unboxer}!boxing\_\-sample\_\-cb@{boxing\_\-sample\_\-cb}}
+\index{boxing\_\-sample\_\-cb@{boxing\_\-sample\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-sample\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}boxing\_\-image8 $\ast$($\ast$ {\bf boxing\_\-sample\_\-cb})(void $\ast$user, const boxing\_\-image8 $\ast$frame, const boxing\_\-matrixf $\ast$location\_\-matrix, DBOOL $\ast$state)}\hfill}
+\label{group__unboxer_gad341bfd9895ae5c55c2697a388a898ce}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em frame}]Frame. \item[\mbox{$\leftarrow$} {\em location\_\-matrix}]Location matrix. \item[\mbox{$\leftarrow$} {\em state}]State.\end{DoxyParams}
+Called when image sampling is complete.. \hypertarget{group__unboxer_gabdf338be152e0494e1e3da7a73164c59}{
+\index{unboxer@{unboxer}!boxing\_\-tracker\_\-created\_\-cb@{boxing\_\-tracker\_\-created\_\-cb}}
+\index{boxing\_\-tracker\_\-created\_\-cb@{boxing\_\-tracker\_\-created\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-tracker\_\-created\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-tracker\_\-created\_\-cb})(void $\ast$user, int $\ast$res, boxing\_\-tracker $\ast$tracker)}\hfill}
+\label{group__unboxer_gabdf338be152e0494e1e3da7a73164c59}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em tracker}]Tracker.\end{DoxyParams}
+Called after the frame tracker object is created. Allows for implementation spesific modifications to the tracker. \hypertarget{group__unboxer_gaaafcc2fdb11841b10ab6adb26b06eb09}{
+\index{unboxer@{unboxer}!boxing\_\-training\_\-complete\_\-cb@{boxing\_\-training\_\-complete\_\-cb}}
+\index{boxing\_\-training\_\-complete\_\-cb@{boxing\_\-training\_\-complete\_\-cb}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-training\_\-complete\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf boxing\_\-training\_\-complete\_\-cb})(void $\ast$user, int $\ast$res, void $\ast$training\_\-result)}\hfill}
+\label{group__unboxer_gaaafcc2fdb11841b10ab6adb26b06eb09}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftrightarrow$} {\em user}]User data. \item[\mbox{$\leftarrow$} {\em res}]Result. \item[\mbox{$\leftarrow$} {\em training\_\-result}]Training result.\end{DoxyParams}
+Called when boxing training is complete. 
+
+\subsubsection{Enumeration Type Documentation}
+\hypertarget{group__unboxer_gae2e6edbb6bac239133f13aa8164984e3}{
+\index{unboxer@{unboxer}!boxing\_\-process\_\-callback\_\-result@{boxing\_\-process\_\-callback\_\-result}}
+\index{boxing\_\-process\_\-callback\_\-result@{boxing\_\-process\_\-callback\_\-result}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-process\_\-callback\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf boxing\_\-process\_\-callback\_\-result}}\hfill}
+\label{group__unboxer_gae2e6edbb6bac239133f13aa8164984e3}
+\hyperlink{unboxer_8h_source}{unboxer.h} 
+\begin{DoxyParams}{Parameters}
+\item[{\em BOXING\_\-PROCESS\_\-CALLBACK\_\-OK}](0) Process callback OK. \item[{\em BOXING\_\-PROCESS\_\-CALLBACK\_\-ABORT}](1) Process callback abort.\end{DoxyParams}
+A callback should return BOXING\_\-PROCESS\_\-CALLBACK\_\-ABORT if the unbox process should be aborted or BOXING\_\-PROCESS\_\-CALLBACK\_\-OK is the unbox process should continue. \hypertarget{group__unboxer_ga6c7b8f994da998dcd78b154856064ca6}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-result@{boxing\_\-unboxer\_\-result}}
+\index{boxing\_\-unboxer\_\-result@{boxing\_\-unboxer\_\-result}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf boxing\_\-unboxer\_\-result}}\hfill}
+\label{group__unboxer_ga6c7b8f994da998dcd78b154856064ca6}
+\hyperlink{unboxer_8h_source}{unboxer.h} 
+\begin{DoxyParams}{Parameters}
+\item[{\em BOXING\_\-UNBOXER\_\-OK}](0) Unboxing OK. \item[{\em BOXING\_\-UNBOXER\_\-METADATA\_\-ERROR}](1) Metadata error. \item[{\em BOXING\_\-UNBOXER\_\-BORDER\_\-TRACKING\_\-ERROR}](2) Border tracking error. \item[{\em BOXING\_\-UNBOXER\_\-DATA\_\-DECODE\_\-ERROR}](3) Data decode error. \item[{\em BOXING\_\-UNBOXER\_\-CRC\_\-MISMATCH\_\-ERROR}](4) CRC mismatch error. \item[{\em BOXING\_\-UNBOXER\_\-CONFIG\_\-ERROR}](5) Configuration error. \item[{\em BOXING\_\-UNBOXER\_\-PROCESS\_\-CALLBACK\_\-ABORT}](6) Process callback abort. \item[{\em BOXING\_\-UNBOXER\_\-INPUT\_\-DATA\_\-ERROR}](7) Input data error.\end{DoxyParams}
+Unboxer result codes. 
+
+\subsubsection{Function Documentation}
+\hypertarget{group__unboxer_ga8ae669c445fbfae38b44931e2572f0ba}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-codec\_\-info@{boxing\_\-unboxer\_\-codec\_\-info}}
+\index{boxing\_\-unboxer\_\-codec\_\-info@{boxing\_\-unboxer\_\-codec\_\-info}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-codec\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-unboxer\_\-codec\_\-info (const boxing\_\-unboxer $\ast$ {\em unboxer}, \/  int {\em step}, \/  {\bf boxing\_\-codec\_\-info} $\ast$ {\em info})}\hfill}
+\label{group__unboxer_ga8ae669c445fbfae38b44931e2572f0ba}
+Get the information of the current codec from the unboxer instance.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer instance. \item[\mbox{$\leftarrow$} {\em step}]Step value. \item[\mbox{$\rightarrow$} {\em info}]Codec information. \end{DoxyParams}
+\hypertarget{group__unboxer_gac2e6043a93bbf6541d50332dbf86b471}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-create@{boxing\_\-unboxer\_\-create}}
+\index{boxing\_\-unboxer\_\-create@{boxing\_\-unboxer\_\-create}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}boxing\_\-unboxer$\ast$ boxing\_\-unboxer\_\-create ({\bf boxing\_\-unboxer\_\-parameters} $\ast$ {\em parameters})}\hfill}
+\label{group__unboxer_gac2e6043a93bbf6541d50332dbf86b471}
+Create unboxer with given parameters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em parameters}]Unboxing configuration. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unboxer instance or NULL on error. 
+\end{DoxyReturn}
+\hypertarget{group__unboxer_gaeba1508d04d3ba66f4ec5acd2ea71244}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-decode@{boxing\_\-unboxer\_\-decode}}
+\index{boxing\_\-unboxer\_\-decode@{boxing\_\-unboxer\_\-decode}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-decode}]{\setlength{\rightskip}{0pt plus 5cm}int boxing\_\-unboxer\_\-decode (boxing\_\-unboxer $\ast$ {\em unboxer}, \/  gvector $\ast$ {\em data}, \/  boxing\_\-metadata\_\-list $\ast$ {\em metadata}, \/  boxing\_\-stats\_\-decode $\ast$ {\em decode\_\-stats}, \/  unsigned int {\em step}, \/  void $\ast$ {\em user\_\-data})}\hfill}
+\label{group__unboxer_gaeba1508d04d3ba66f4ec5acd2ea71244}
+Unbox metadata and data from quantized data container.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer structure \item[\mbox{$\leftrightarrow$} {\em data}]In: Quantized data container. Out: Decoded data. \item[\mbox{$\leftarrow$} {\em metadata}]Decoded metadata \item[\mbox{$\rightarrow$} {\em decode\_\-stats}]Statistic of the decode process \item[\mbox{$\leftarrow$} {\em step}]Decoding step \item[\mbox{$\leftarrow$} {\em user\_\-data}]User data. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unboxing status code 
+\end{DoxyReturn}
+\hypertarget{group__unboxer_gab8716d553639132ce7fc268c4c7a2c50}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-decoding\_\-steps@{boxing\_\-unboxer\_\-decoding\_\-steps}}
+\index{boxing\_\-unboxer\_\-decoding\_\-steps@{boxing\_\-unboxer\_\-decoding\_\-steps}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-decoding\_\-steps}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t boxing\_\-unboxer\_\-decoding\_\-steps (const boxing\_\-unboxer $\ast$ {\em unboxer})}\hfill}
+\label{group__unboxer_gab8716d553639132ce7fc268c4c7a2c50}
+Get the number of unboxer decoding steps.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer instance. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of decoding steps or 0 on error. 
+\end{DoxyReturn}
+\hypertarget{group__unboxer_gacef2db1849f3d7e1e718cf8bdae2a302}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-dispatcher@{boxing\_\-unboxer\_\-dispatcher}}
+\index{boxing\_\-unboxer\_\-dispatcher@{boxing\_\-unboxer\_\-dispatcher}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}boxing\_\-codecdispatcher$\ast$ boxing\_\-unboxer\_\-dispatcher (boxing\_\-unboxer $\ast$ {\em unboxer}, \/  const char $\ast$ {\em coding\_\-scheme})}\hfill}
+\label{group__unboxer_gacef2db1849f3d7e1e718cf8bdae2a302}
+Get the unboxer dispatcher. The dispatcher is responsible for calling the codecs in the codec chain.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer. \item[\mbox{$\leftarrow$} {\em coding\_\-scheme}]Coding scheme. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boxing\_\-codecdispatcher instance. 
+\end{DoxyReturn}
+\hypertarget{group__unboxer_ga754c1c3545803289577a78169af12ca0}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-free@{boxing\_\-unboxer\_\-free}}
+\index{boxing\_\-unboxer\_\-free@{boxing\_\-unboxer\_\-free}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-unboxer\_\-free (boxing\_\-unboxer $\ast$ {\em unboxer})}\hfill}
+\label{group__unboxer_ga754c1c3545803289577a78169af12ca0}
+Free data owned by unboxer structure, but not structure itself.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em unboxer}]Unboxer instance. \end{DoxyParams}
+\hypertarget{group__unboxer_ga7b80bcde9d5f997789229978003439c7}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-is\_\-raw\_\-input@{boxing\_\-unboxer\_\-is\_\-raw\_\-input}}
+\index{boxing\_\-unboxer\_\-is\_\-raw\_\-input@{boxing\_\-unboxer\_\-is\_\-raw\_\-input}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-is\_\-raw\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}int boxing\_\-unboxer\_\-is\_\-raw\_\-input (boxing\_\-unboxer $\ast$ {\em unboxer})}\hfill}
+\label{group__unboxer_ga7b80bcde9d5f997789229978003439c7}
+Return is\_\-raw parameter.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer instance. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is\_\-raw value. 
+\end{DoxyReturn}
+\hypertarget{group__unboxer_gaa4015256c5bc7f8e1f359a583117c792}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-parameters\_\-free@{boxing\_\-unboxer\_\-parameters\_\-free}}
+\index{boxing\_\-unboxer\_\-parameters\_\-free@{boxing\_\-unboxer\_\-parameters\_\-free}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-parameters\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-unboxer\_\-parameters\_\-free ({\bf boxing\_\-unboxer\_\-parameters} $\ast$ {\em parameters})}\hfill}
+\label{group__unboxer_gaa4015256c5bc7f8e1f359a583117c792}
+Free data owned by the parameters, but not the parameter instance itself.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em parameters}]Parameters to be freed. \end{DoxyParams}
+\hypertarget{group__unboxer_ga98551069c5b6d815ea59fab7a4ac4040}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-parameters\_\-init@{boxing\_\-unboxer\_\-parameters\_\-init}}
+\index{boxing\_\-unboxer\_\-parameters\_\-init@{boxing\_\-unboxer\_\-parameters\_\-init}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-parameters\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-unboxer\_\-parameters\_\-init ({\bf boxing\_\-unboxer\_\-parameters} $\ast$ {\em parameters})}\hfill}
+\label{group__unboxer_ga98551069c5b6d815ea59fab7a4ac4040}
+Initialize unboxer parameters to default values.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em parameters}]Parameters to be initialized. \end{DoxyParams}
+\hypertarget{group__unboxer_ga16c59852a340d2d593efb5beec2ac5b2}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-reset@{boxing\_\-unboxer\_\-reset}}
+\index{boxing\_\-unboxer\_\-reset@{boxing\_\-unboxer\_\-reset}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-unboxer\_\-reset (const boxing\_\-unboxer $\ast$ {\em unboxer})}\hfill}
+\label{group__unboxer_ga16c59852a340d2d593efb5beec2ac5b2}
+Reset unboxer codec and metadata codec.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer instance. \end{DoxyParams}
+\hypertarget{group__unboxer_gaa35a6cc3bb000da1ae59f1d99fefe488}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-set\_\-raw\_\-input@{boxing\_\-unboxer\_\-set\_\-raw\_\-input}}
+\index{boxing\_\-unboxer\_\-set\_\-raw\_\-input@{boxing\_\-unboxer\_\-set\_\-raw\_\-input}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-set\_\-raw\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-unboxer\_\-set\_\-raw\_\-input (boxing\_\-unboxer $\ast$ {\em unboxer}, \/  int {\em is\_\-raw})}\hfill}
+\label{group__unboxer_gaa35a6cc3bb000da1ae59f1d99fefe488}
+Set if input images should be interpreted as RAW images.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer instance. \item[\mbox{$\leftarrow$} {\em is\_\-raw}]false if 0, else true \end{DoxyParams}
+\hypertarget{group__unboxer_ga832bea46817eb5b565687abc0d7635fd}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-unbox@{boxing\_\-unboxer\_\-unbox}}
+\index{boxing\_\-unboxer\_\-unbox@{boxing\_\-unboxer\_\-unbox}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-unbox}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf boxing\_\-unboxer\_\-result} boxing\_\-unboxer\_\-unbox (gvector $\ast$ {\em data}, \/  boxing\_\-metadata\_\-list $\ast$ {\em metadata}, \/  boxing\_\-image8 $\ast$ {\em image}, \/  boxing\_\-unboxer $\ast$ {\em unboxer}, \/  int $\ast$ {\em extract\_\-result}, \/  void $\ast$ {\em user\_\-data})}\hfill}
+\label{group__unboxer_ga832bea46817eb5b565687abc0d7635fd}
+Decode image and return data and metadata on success.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\rightarrow$} {\em data}]Decoded data. \item[\mbox{$\rightarrow$} {\em metadata}]Decoded metadata. \item[\mbox{$\leftarrow$} {\em image}]Input image. \item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer structure. \item[\mbox{$\rightarrow$} {\em extract\_\-result}]Result from data extraction phase of unboxing. \item[\mbox{$\leftarrow$} {\em user\_\-data}]User data. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unboxing status code. 
+\end{DoxyReturn}
+\hypertarget{group__unboxer_gabdb1dfbc5aa0dc72aa2f75a62acb827d}{
+\index{unboxer@{unboxer}!boxing\_\-unboxer\_\-unbox\_\-extract\_\-container@{boxing\_\-unboxer\_\-unbox\_\-extract\_\-container}}
+\index{boxing\_\-unboxer\_\-unbox\_\-extract\_\-container@{boxing\_\-unboxer\_\-unbox\_\-extract\_\-container}!unboxer@{unboxer}}
+\paragraph[{boxing\_\-unboxer\_\-unbox\_\-extract\_\-container}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf boxing\_\-unboxer\_\-result} boxing\_\-unboxer\_\-unbox\_\-extract\_\-container (gvector $\ast$ {\em data}, \/  boxing\_\-metadata\_\-list $\ast$ {\em metadata}, \/  boxing\_\-image8 $\ast$ {\em image}, \/  boxing\_\-unboxer $\ast$ {\em unboxer}, \/  void $\ast$ {\em user\_\-data})}\hfill}
+\label{group__unboxer_gabdb1dfbc5aa0dc72aa2f75a62acb827d}
+Unbox metadata and extract a raw quantized copy of the data container.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\rightarrow$} {\em data}]Quantized data container. \item[\mbox{$\rightarrow$} {\em metadata}]Decoded metadata. \item[\mbox{$\leftarrow$} {\em image}]Image to be decoded. \item[\mbox{$\leftarrow$} {\em unboxer}]Unboxer structure. \item[\mbox{$\leftarrow$} {\em user\_\-data}]User data. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unboxing status code 
+\end{DoxyReturn}

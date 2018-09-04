@@ -1,0 +1,156 @@
+\begin{theindex}
+
+  \item {Boxer}, \hyperpage{2}
+  \item {boxer}
+    \subitem {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}create}, \hyperpage{3}
+    \subitem {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}free}, \hyperpage{3}
+    \subitem {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}create}, \hyperpage{3}
+    \subitem {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}free}, \hyperpage{3}
+    \subitem {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}init}, \hyperpage{3}
+  \item {boxing\_\discretionary {-}{}{}all\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{6}
+  \item {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}create}
+    \subitem {boxer}, \hyperpage{3}
+  \item {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}free}
+    \subitem {boxer}, \hyperpage{3}
+  \item {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}create}
+    \subitem {boxer}, \hyperpage{3}
+  \item {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}free}
+    \subitem {boxer}, \hyperpage{3}
+  \item {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}init}
+    \subitem {boxer}, \hyperpage{3}
+  \item {boxing\_\discretionary {-}{}{}boxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}s}, \hyperpage{18}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}clone}
+    \subitem {config}, \hyperpage{14}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}create}
+    \subitem {config}, \hyperpage{14}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}free}
+    \subitem {config}, \hyperpage{15}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}instance}
+    \subitem {config}, \hyperpage{15}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}is\_\discretionary {-}{}{}equal}
+    \subitem {config}, \hyperpage{15}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}is\_\discretionary {-}{}{}set}
+    \subitem {config}, \hyperpage{15}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}parse\_\discretionary {-}{}{}list\_\discretionary {-}{}{}properties}
+    \subitem {config}, \hyperpage{16}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}properties}
+    \subitem {config}, \hyperpage{16}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property}
+    \subitem {config}, \hyperpage{16}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}int}
+    \subitem {config}, \hyperpage{16}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}pointf}
+    \subitem {config}, \hyperpage{17}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}pointi}
+    \subitem {config}, \hyperpage{17}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}uint}
+    \subitem {config}, \hyperpage{17}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}s}, \hyperpage{19}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}set\_\discretionary {-}{}{}property}
+    \subitem {config}, \hyperpage{18}
+  \item {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}set\_\discretionary {-}{}{}property\_\discretionary {-}{}{}uint}
+    \subitem {config}, \hyperpage{18}
+  \item {boxing\_\discretionary {-}{}{}content\_\discretionary {-}{}{}quantized\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{6}
+  \item {boxing\_\discretionary {-}{}{}content\_\discretionary {-}{}{}sampled\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{7}
+  \item {boxing\_\discretionary {-}{}{}decode\_\discretionary {-}{}{}step\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{7}
+  \item {boxing\_\discretionary {-}{}{}metadata\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{7}
+  \item {boxing\_\discretionary {-}{}{}process\_\discretionary {-}{}{}callback\_\discretionary {-}{}{}result}
+    \subitem {unboxer}, \hyperpage{9}
+  \item {boxing\_\discretionary {-}{}{}quantize\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{8}
+  \item {boxing\_\discretionary {-}{}{}reference\_\discretionary {-}{}{}bar\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{8}
+  \item {boxing\_\discretionary {-}{}{}sample\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{8}
+  \item {boxing\_\discretionary {-}{}{}tracker\_\discretionary {-}{}{}created\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{8}
+  \item {boxing\_\discretionary {-}{}{}training\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}
+    \subitem {unboxer}, \hyperpage{9}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}codec\_\discretionary {-}{}{}info}
+    \subitem {unboxer}, \hyperpage{10}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}create}
+    \subitem {unboxer}, \hyperpage{10}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}decode}
+    \subitem {unboxer}, \hyperpage{10}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}decoding\_\discretionary {-}{}{}steps}
+    \subitem {unboxer}, \hyperpage{10}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}dispatcher}
+    \subitem {unboxer}, \hyperpage{11}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}free}
+    \subitem {unboxer}, \hyperpage{11}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}is\_\discretionary {-}{}{}raw\_\discretionary {-}{}{}input}
+    \subitem {unboxer}, \hyperpage{11}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}free}
+    \subitem {unboxer}, \hyperpage{11}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}init}
+    \subitem {unboxer}, \hyperpage{11}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}s}, \hyperpage{19}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}reset}
+    \subitem {unboxer}, \hyperpage{12}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}result}
+    \subitem {unboxer}, \hyperpage{9}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}set\_\discretionary {-}{}{}raw\_\discretionary {-}{}{}input}
+    \subitem {unboxer}, \hyperpage{12}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}unbox}
+    \subitem {unboxer}, \hyperpage{12}
+  \item {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}unbox\_\discretionary {-}{}{}extract\_\discretionary {-}{}{}container}
+    \subitem {unboxer}, \hyperpage{12}
+  \item {boxing\_\discretionary {-}{}{}unboxing\_\discretionary {-}{}{}codec\_\discretionary {-}{}{}info\_\discretionary {-}{}{}s}, \hyperpage{20}
+
+  \indexspace
+
+  \item {config}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}clone}, \hyperpage{14}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}create}, \hyperpage{14}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}free}, \hyperpage{15}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}instance}, \hyperpage{15}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}is\_\discretionary {-}{}{}equal}, \hyperpage{15}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}is\_\discretionary {-}{}{}set}, \hyperpage{15}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}parse\_\discretionary {-}{}{}list\_\discretionary {-}{}{}properties}, \hyperpage{16}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}properties}, \hyperpage{16}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property}, \hyperpage{16}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}int}, \hyperpage{16}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}pointf}, \hyperpage{17}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}pointi}, \hyperpage{17}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}property\_\discretionary {-}{}{}uint}, \hyperpage{17}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}set\_\discretionary {-}{}{}property}, \hyperpage{18}
+    \subitem {boxing\_\discretionary {-}{}{}config\_\discretionary {-}{}{}set\_\discretionary {-}{}{}property\_\discretionary {-}{}{}uint}, \hyperpage{18}
+  \item {Configuration}, \hyperpage{13}
+
+  \indexspace
+
+  \item {Unboxer}, \hyperpage{4}
+  \item {unboxer}
+    \subitem {boxing\_\discretionary {-}{}{}all\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}, \hyperpage{6}
+    \subitem {boxing\_\discretionary {-}{}{}content\_\discretionary {-}{}{}quantized\_\discretionary {-}{}{}cb}, \hyperpage{6}
+    \subitem {boxing\_\discretionary {-}{}{}content\_\discretionary {-}{}{}sampled\_\discretionary {-}{}{}cb}, \hyperpage{7}
+    \subitem {boxing\_\discretionary {-}{}{}decode\_\discretionary {-}{}{}step\_\discretionary {-}{}{}cb}, \hyperpage{7}
+    \subitem {boxing\_\discretionary {-}{}{}metadata\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}, \hyperpage{7}
+    \subitem {boxing\_\discretionary {-}{}{}process\_\discretionary {-}{}{}callback\_\discretionary {-}{}{}result}, \hyperpage{9}
+    \subitem {boxing\_\discretionary {-}{}{}quantize\_\discretionary {-}{}{}cb}, \hyperpage{8}
+    \subitem {boxing\_\discretionary {-}{}{}reference\_\discretionary {-}{}{}bar\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}, \hyperpage{8}
+    \subitem {boxing\_\discretionary {-}{}{}sample\_\discretionary {-}{}{}cb}, \hyperpage{8}
+    \subitem {boxing\_\discretionary {-}{}{}tracker\_\discretionary {-}{}{}created\_\discretionary {-}{}{}cb}, \hyperpage{8}
+    \subitem {boxing\_\discretionary {-}{}{}training\_\discretionary {-}{}{}complete\_\discretionary {-}{}{}cb}, \hyperpage{9}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}codec\_\discretionary {-}{}{}info}, \hyperpage{10}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}create}, \hyperpage{10}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}decode}, \hyperpage{10}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}decoding\_\discretionary {-}{}{}steps}, \hyperpage{10}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}dispatcher}, \hyperpage{11}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}free}, \hyperpage{11}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}is\_\discretionary {-}{}{}raw\_\discretionary {-}{}{}input}, \hyperpage{11}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}free}, \hyperpage{11}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}parameters\_\discretionary {-}{}{}init}, \hyperpage{11}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}reset}, \hyperpage{12}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}result}, \hyperpage{9}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}set\_\discretionary {-}{}{}raw\_\discretionary {-}{}{}input}, \hyperpage{12}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}unbox}, \hyperpage{12}
+    \subitem {boxing\_\discretionary {-}{}{}unboxer\_\discretionary {-}{}{}unbox\_\discretionary {-}{}{}extract\_\discretionary {-}{}{}container}, \hyperpage{12}
+  \item {Unboxing}, \hyperpage{4}
+
+\end{theindex}

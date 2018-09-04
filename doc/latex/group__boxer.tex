@@ -1,0 +1,80 @@
+\hypertarget{group__boxer}{
+\subsection{Boxer}
+\label{group__boxer}\index{Boxer@{Boxer}}
+}
+
+
+Box data into frames.
+
+The boxer is responsible for coding digital and analoge data into frames. This provides the top level API for coding data.  
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structboxing__boxer__parameters__s}{boxing\_\-boxer\_\-parameters\_\-s}
+\begin{DoxyCompactList}\small\item\em Boxing parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structboxing__boxer__parameters__s}{boxing\_\-boxer\_\-parameters} $\ast$ \hyperlink{group__boxer_ga7ff3d63a4b306374a16ad7a435d3aa52}{boxing\_\-boxer\_\-parameters\_\-create} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Create boxer parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__boxer_gac254af5ce8ee6a05f39869c70bad33e8}{boxing\_\-boxer\_\-parameters\_\-free} (\hyperlink{structboxing__boxer__parameters__s}{boxing\_\-boxer\_\-parameters} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Free boxer parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__boxer_ga28975734772cdb389c97d7adf3e9f156}{boxing\_\-boxer\_\-parameters\_\-init} (\hyperlink{structboxing__boxer__parameters__s}{boxing\_\-boxer\_\-parameters} $\ast$params, const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initialize boxer parameters. \item\end{DoxyCompactList}\item 
+boxing\_\-boxer $\ast$ \hyperlink{group__boxer_ga185a034b3140ffa2f27552b45e122783}{boxing\_\-boxer\_\-create} (\hyperlink{structboxing__boxer__parameters__s}{boxing\_\-boxer\_\-parameters} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Create boxer. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__boxer_gafbafe20dd1e70dd09896e80e9c76332d}{boxing\_\-boxer\_\-free} (boxing\_\-boxer $\ast$boxer)
+\begin{DoxyCompactList}\small\item\em Free boxer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{group__boxer_ga185a034b3140ffa2f27552b45e122783}{
+\index{boxer@{boxer}!boxing\_\-boxer\_\-create@{boxing\_\-boxer\_\-create}}
+\index{boxing\_\-boxer\_\-create@{boxing\_\-boxer\_\-create}!boxer@{boxer}}
+\paragraph[{boxing\_\-boxer\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}boxing\_\-boxer$\ast$ boxing\_\-boxer\_\-create ({\bf boxing\_\-boxer\_\-parameters} $\ast$ {\em params})}\hfill}
+\label{group__boxer_ga185a034b3140ffa2f27552b45e122783}
+Create boxer with given parameters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em params}]Boxing configuration. \end{DoxyParams}
+\hypertarget{group__boxer_gafbafe20dd1e70dd09896e80e9c76332d}{
+\index{boxer@{boxer}!boxing\_\-boxer\_\-free@{boxing\_\-boxer\_\-free}}
+\index{boxing\_\-boxer\_\-free@{boxing\_\-boxer\_\-free}!boxer@{boxer}}
+\paragraph[{boxing\_\-boxer\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-boxer\_\-free (boxing\_\-boxer $\ast$ {\em boxer})}\hfill}
+\label{group__boxer_gafbafe20dd1e70dd09896e80e9c76332d}
+Free data owned by boxer structure, but not structure itself.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em boxer}]Boxer instance. \end{DoxyParams}
+\hypertarget{group__boxer_ga7ff3d63a4b306374a16ad7a435d3aa52}{
+\index{boxer@{boxer}!boxing\_\-boxer\_\-parameters\_\-create@{boxing\_\-boxer\_\-parameters\_\-create}}
+\index{boxing\_\-boxer\_\-parameters\_\-create@{boxing\_\-boxer\_\-parameters\_\-create}!boxer@{boxer}}
+\paragraph[{boxing\_\-boxer\_\-parameters\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boxing\_\-boxer\_\-parameters}$\ast$ boxing\_\-boxer\_\-parameters\_\-create (const {\bf boxing\_\-config} $\ast$ {\em config})}\hfill}
+\label{group__boxer_ga7ff3d63a4b306374a16ad7a435d3aa52}
+Create boxer parameters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em config}]Boxing configuration. \end{DoxyParams}
+\hypertarget{group__boxer_gac254af5ce8ee6a05f39869c70bad33e8}{
+\index{boxer@{boxer}!boxing\_\-boxer\_\-parameters\_\-free@{boxing\_\-boxer\_\-parameters\_\-free}}
+\index{boxing\_\-boxer\_\-parameters\_\-free@{boxing\_\-boxer\_\-parameters\_\-free}!boxer@{boxer}}
+\paragraph[{boxing\_\-boxer\_\-parameters\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-boxer\_\-parameters\_\-free ({\bf boxing\_\-boxer\_\-parameters} $\ast$ {\em params})}\hfill}
+\label{group__boxer_gac254af5ce8ee6a05f39869c70bad33e8}
+Free boxer parameters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em params}]Boxer parameters instance. \end{DoxyParams}
+\hypertarget{group__boxer_ga28975734772cdb389c97d7adf3e9f156}{
+\index{boxer@{boxer}!boxing\_\-boxer\_\-parameters\_\-init@{boxing\_\-boxer\_\-parameters\_\-init}}
+\index{boxing\_\-boxer\_\-parameters\_\-init@{boxing\_\-boxer\_\-parameters\_\-init}!boxer@{boxer}}
+\paragraph[{boxing\_\-boxer\_\-parameters\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-boxer\_\-parameters\_\-init ({\bf boxing\_\-boxer\_\-parameters} $\ast$ {\em params}, \/  const {\bf boxing\_\-config} $\ast$ {\em config})}\hfill}
+\label{group__boxer_ga28975734772cdb389c97d7adf3e9f156}
+Initialize boxer parameters.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em params}]Boxing parameters. \item[{\em config}]Boxing configuration. \end{DoxyParams}

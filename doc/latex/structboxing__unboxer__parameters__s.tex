@@ -1,0 +1,16 @@
+\hypertarget{structboxing__unboxer__parameters__s}{
+\subsection{boxing\_\-unboxer\_\-parameters\_\-s Struct Reference}
+\label{structboxing__unboxer__parameters__s}\index{boxing\_\-unboxer\_\-parameters\_\-s@{boxing\_\-unboxer\_\-parameters\_\-s}}
+}
+
+
+Unboxer configuration.  
+
+
+\subsubsection{Detailed Description}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em is\_\-raw}]True if input data is in RAW format. \item[{\em codec\_\-cb}]Codec callback function. \item[{\em format}]Boxing format, defines frame geometry and codecs. \item[{\em training\_\-mode}]True if unboxer should be run in training mode. \item[{\em training\_\-mode\_\-reference}]Original RAW frame. \item[{\em training\_\-result}]Output from training mode. \item[{\em pre\_\-filter}]5x5 sharpness filter that will be executed on images to be unboxed. Default filter function is used if set to NULL. Provide a direct assignemement function (i.e. destination = source) if you want to skip filtering. \item[{\em decoding\_\-filters}]Codec decoding functions. \item[{\em sample\_\-contents}]Boxing sample function. \item[{\em quantize\_\-contents}]Boxing quantize function. \item[{\em on\_\-tracker\_\-created}]Boxing tracker created callback function. \item[{\em on\_\-content\_\-sampled}]Boxing content sampled callback function. \item[{\em on\_\-content\_\-quantized}]Boxing content quantized callback function. \item[{\em on\_\-metadata\_\-complete}]Boxing metadata complete callback function. \item[{\em on\_\-reference\_\-bar\_\-complete}]Boxing reference bar complete callback function. \item[{\em on\_\-corner\_\-mark\_\-complete}]Boxing corner mark complete callback function. \item[{\em on\_\-training\_\-complete}]Boxing training complete callback function. \item[{\em on\_\-decode\_\-step}]Boxing decode step callback function. \item[{\em on\_\-all\_\-complete}]Boxing all complete callback function. \item[{\em orig\_\-image}]Original image.\end{DoxyParams}
+Configure unboxer. Note that the callback interface is only avaliable if BOXINGLIB\_\-CALLBACK is defined.
+
+Note 1: Training mode is an experimental feature for improving the unboxer by unboxing a known frame and using it's characteristics when decoding the rest of the frames. Could be removed in future versions in the library. Note 2: Pre-\/filtering of the image is really the responsibility of the reading device. This function will be removed in future versions of the library. 

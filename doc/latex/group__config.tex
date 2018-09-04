@@ -1,0 +1,232 @@
+\hypertarget{group__config}{
+\subsection{Configuration}
+\label{group__config}\index{Configuration@{Configuration}}
+}
+
+
+Frame configuration.
+
+The configuration describes the frame layout and the codecs used to code and decode the digital data. The configuration is a set of key / value strings organized into groups.  
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structboxing__config__s}{boxing\_\-config\_\-s}
+\begin{DoxyCompactList}\small\item\em Frame configuration. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$ \hyperlink{group__config_ga244626b48bf3730a4a18eaac07be13fd}{boxing\_\-config\_\-create} ()
+\begin{DoxyCompactList}\small\item\em Create config object. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__config_ga344b21cc581e954c02318d24cc11fb7d}{boxing\_\-config\_\-free} (\hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Frees occupied memory of boxing\_\-config structure. \item\end{DoxyCompactList}\item 
+\hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$ \hyperlink{group__config_gab662dff6c036f3672b7711191a853868}{boxing\_\-config\_\-clone} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Clone boxing\_\-config structure. \item\end{DoxyCompactList}\item 
+DBOOL \hyperlink{group__config_ga4497166dc4bd1fac380e2cc448a0c4c9}{boxing\_\-config\_\-is\_\-equal} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$a, const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Function checks two instances of the boxing\_\-config structures on the identity. \item\end{DoxyCompactList}\item 
+\hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$ \hyperlink{group__config_ga0290a2c16c8bc625819803b0ce1ef7de}{boxing\_\-config\_\-instance} ()
+\begin{DoxyCompactList}\small\item\em Get global config instance. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__config_gaba83318eb9eab4e010742c737b1f5782}{boxing\_\-config\_\-set\_\-property} (\hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$group, const char $\ast$key, const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Set string property. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__config_gaae0ab5e0bb90813ced395324ca46f2b0}{boxing\_\-config\_\-set\_\-property\_\-uint} (\hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key, unsigned int value)
+\begin{DoxyCompactList}\small\item\em Set unsinged int property. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__config_gac01d325efa09fedfeae80c786be002c9}{boxing\_\-config\_\-properties} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const GHashTable $\ast$$\ast$properties)
+\begin{DoxyCompactList}\small\item\em Get all group properties. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__config_ga4065b7a4d735f8df7e12900d73b4fb7a}{boxing\_\-config\_\-property} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get string property. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__config_ga7fa190ebd009d28afed48273930b1365}{boxing\_\-config\_\-property\_\-int} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get integer property. \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{group__config_gae64eadea5e49a28c66fd69a01ea1c569}{boxing\_\-config\_\-property\_\-uint} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get unsigned integer property. \item\end{DoxyCompactList}\item 
+boxing\_\-pointi \hyperlink{group__config_ga4f8f28da2e1a1ce7157f50d6a0a3aa29}{boxing\_\-config\_\-property\_\-pointi} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key, DBOOL $\ast$found)
+\begin{DoxyCompactList}\small\item\em Get integer point property. \item\end{DoxyCompactList}\item 
+boxing\_\-pointf \hyperlink{group__config_gac319e2b27a02d15a4ea05cd001d50b39}{boxing\_\-config\_\-property\_\-pointf} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key, DBOOL $\ast$was\_\-found)
+\begin{DoxyCompactList}\small\item\em Get float point property. \item\end{DoxyCompactList}\item 
+DBOOL \hyperlink{group__config_ga38dd7ef844687d0aeb7c320d23a50cf1}{boxing\_\-config\_\-is\_\-set} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Check if property exists. \item\end{DoxyCompactList}\item 
+gvector $\ast$ \hyperlink{group__config_ga74a3b76919775886d79bb478e6c515d1}{boxing\_\-config\_\-parse\_\-list\_\-properties} (const \hyperlink{structboxing__config__s}{boxing\_\-config} $\ast$config, const char $\ast$name, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Get comma separated property value. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{group__config_gab662dff6c036f3672b7711191a853868}{
+\index{config@{config}!boxing\_\-config\_\-clone@{boxing\_\-config\_\-clone}}
+\index{boxing\_\-config\_\-clone@{boxing\_\-config\_\-clone}!config@{config}}
+\paragraph[{boxing\_\-config\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boxing\_\-config}$\ast$ boxing\_\-config\_\-clone (const {\bf boxing\_\-config} $\ast$ {\em config})}\hfill}
+\label{group__config_gab662dff6c036f3672b7711191a853868}
+Creates a copy of input boxing\_\-config structure and returns it. If boxing config pointer is NULL function returns NULL.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]boxing\_\-config pointer. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new copy of boxing\_\-config structure or NULL. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga244626b48bf3730a4a18eaac07be13fd}{
+\index{config@{config}!boxing\_\-config\_\-create@{boxing\_\-config\_\-create}}
+\index{boxing\_\-config\_\-create@{boxing\_\-config\_\-create}!config@{config}}
+\paragraph[{boxing\_\-config\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boxing\_\-config}$\ast$ boxing\_\-config\_\-create ()}\hfill}
+\label{group__config_ga244626b48bf3730a4a18eaac07be13fd}
+Allocate memory for the boxing\_\-config type and initializes internal hash tables.
+
+\begin{DoxyReturn}{Returns}
+New config instance. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga344b21cc581e954c02318d24cc11fb7d}{
+\index{config@{config}!boxing\_\-config\_\-free@{boxing\_\-config\_\-free}}
+\index{boxing\_\-config\_\-free@{boxing\_\-config\_\-free}!config@{config}}
+\paragraph[{boxing\_\-config\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-config\_\-free ({\bf boxing\_\-config} $\ast$ {\em config})}\hfill}
+\label{group__config_ga344b21cc581e954c02318d24cc11fb7d}
+Frees occupied memory of all internal hash tables.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]boxing\_\-config pointer. \end{DoxyParams}
+\hypertarget{group__config_ga0290a2c16c8bc625819803b0ce1ef7de}{
+\index{config@{config}!boxing\_\-config\_\-instance@{boxing\_\-config\_\-instance}}
+\index{boxing\_\-config\_\-instance@{boxing\_\-config\_\-instance}!config@{config}}
+\paragraph[{boxing\_\-config\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boxing\_\-config}$\ast$ boxing\_\-config\_\-instance ()}\hfill}
+\label{group__config_ga0290a2c16c8bc625819803b0ce1ef7de}
+Ig global configuration is not initialized, than initializes internal hash tables and set is\_\-instance\_\-initialized variable.
+
+\begin{DoxyNote}{Note}
+Local config objects can be created using boxing\_\-config\_\-create. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+pointer to the global config instance. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga4497166dc4bd1fac380e2cc448a0c4c9}{
+\index{config@{config}!boxing\_\-config\_\-is\_\-equal@{boxing\_\-config\_\-is\_\-equal}}
+\index{boxing\_\-config\_\-is\_\-equal@{boxing\_\-config\_\-is\_\-equal}!config@{config}}
+\paragraph[{boxing\_\-config\_\-is\_\-equal}]{\setlength{\rightskip}{0pt plus 5cm}DBOOL boxing\_\-config\_\-is\_\-equal (const {\bf boxing\_\-config} $\ast$ {\em a}, \/  const {\bf boxing\_\-config} $\ast$ {\em b})}\hfill}
+\label{group__config_ga4497166dc4bd1fac380e2cc448a0c4c9}
+Function checks two instances of the boxing\_\-config structures on the identity. Return DTRUE if groups (data) and aliaseses (aliases) are equal.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em a}]Pointer to the first instance of the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em b}]Pointer to the second instance of the boxing\_\-config structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sign of identity of the input structures. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga38dd7ef844687d0aeb7c320d23a50cf1}{
+\index{config@{config}!boxing\_\-config\_\-is\_\-set@{boxing\_\-config\_\-is\_\-set}}
+\index{boxing\_\-config\_\-is\_\-set@{boxing\_\-config\_\-is\_\-set}!config@{config}}
+\paragraph[{boxing\_\-config\_\-is\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}DBOOL boxing\_\-config\_\-is\_\-set (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key})}\hfill}
+\label{group__config_ga38dd7ef844687d0aeb7c320d23a50cf1}
+Check if property exists. Return DTRUE if required property exist.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+DTRUE if property exist. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga74a3b76919775886d79bb478e6c515d1}{
+\index{config@{config}!boxing\_\-config\_\-parse\_\-list\_\-properties@{boxing\_\-config\_\-parse\_\-list\_\-properties}}
+\index{boxing\_\-config\_\-parse\_\-list\_\-properties@{boxing\_\-config\_\-parse\_\-list\_\-properties}!config@{config}}
+\paragraph[{boxing\_\-config\_\-parse\_\-list\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}gvector$\ast$ boxing\_\-config\_\-parse\_\-list\_\-properties (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key})}\hfill}
+\label{group__config_ga74a3b76919775886d79bb478e6c515d1}
+Get comma separated property value
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of values. 
+\end{DoxyReturn}
+\hypertarget{group__config_gac01d325efa09fedfeae80c786be002c9}{
+\index{config@{config}!boxing\_\-config\_\-properties@{boxing\_\-config\_\-properties}}
+\index{boxing\_\-config\_\-properties@{boxing\_\-config\_\-properties}!config@{config}}
+\paragraph[{boxing\_\-config\_\-properties}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-config\_\-properties (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const GHashTable $\ast$$\ast$ {\em properties})}\hfill}
+\label{group__config_gac01d325efa09fedfeae80c786be002c9}
+Sets properties pointer.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Property name. \item[\mbox{$\rightarrow$} {\em properties}]Properties hash table. \end{DoxyParams}
+\hypertarget{group__config_ga4065b7a4d735f8df7e12900d73b4fb7a}{
+\index{config@{config}!boxing\_\-config\_\-property@{boxing\_\-config\_\-property}}
+\index{boxing\_\-config\_\-property@{boxing\_\-config\_\-property}!config@{config}}
+\paragraph[{boxing\_\-config\_\-property}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ boxing\_\-config\_\-property (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key})}\hfill}
+\label{group__config_ga4065b7a4d735f8df7e12900d73b4fb7a}
+Get string property.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+required string property or NULL. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga7fa190ebd009d28afed48273930b1365}{
+\index{config@{config}!boxing\_\-config\_\-property\_\-int@{boxing\_\-config\_\-property\_\-int}}
+\index{boxing\_\-config\_\-property\_\-int@{boxing\_\-config\_\-property\_\-int}!config@{config}}
+\paragraph[{boxing\_\-config\_\-property\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int boxing\_\-config\_\-property\_\-int (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key})}\hfill}
+\label{group__config_ga7fa190ebd009d28afed48273930b1365}
+Get integer property.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+required integer property or NULL. 
+\end{DoxyReturn}
+\hypertarget{group__config_gac319e2b27a02d15a4ea05cd001d50b39}{
+\index{config@{config}!boxing\_\-config\_\-property\_\-pointf@{boxing\_\-config\_\-property\_\-pointf}}
+\index{boxing\_\-config\_\-property\_\-pointf@{boxing\_\-config\_\-property\_\-pointf}!config@{config}}
+\paragraph[{boxing\_\-config\_\-property\_\-pointf}]{\setlength{\rightskip}{0pt plus 5cm}boxing\_\-pointf boxing\_\-config\_\-property\_\-pointf (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key}, \/  DBOOL $\ast$ {\em was\_\-found})}\hfill}
+\label{group__config_gac319e2b27a02d15a4ea05cd001d50b39}
+Get float point property.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \item[\mbox{$\rightarrow$} {\em was\_\-found}]A sign of the success of the search for the required property. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+required float point property or NULL. 
+\end{DoxyReturn}
+\hypertarget{group__config_ga4f8f28da2e1a1ce7157f50d6a0a3aa29}{
+\index{config@{config}!boxing\_\-config\_\-property\_\-pointi@{boxing\_\-config\_\-property\_\-pointi}}
+\index{boxing\_\-config\_\-property\_\-pointi@{boxing\_\-config\_\-property\_\-pointi}!config@{config}}
+\paragraph[{boxing\_\-config\_\-property\_\-pointi}]{\setlength{\rightskip}{0pt plus 5cm}boxing\_\-pointi boxing\_\-config\_\-property\_\-pointi (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key}, \/  DBOOL $\ast$ {\em found})}\hfill}
+\label{group__config_ga4f8f28da2e1a1ce7157f50d6a0a3aa29}
+Get integer point property.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \item[\mbox{$\rightarrow$} {\em found}]A sign of the success of the search for the required property. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+required integer point property or NULL. 
+\end{DoxyReturn}
+\hypertarget{group__config_gae64eadea5e49a28c66fd69a01ea1c569}{
+\index{config@{config}!boxing\_\-config\_\-property\_\-uint@{boxing\_\-config\_\-property\_\-uint}}
+\index{boxing\_\-config\_\-property\_\-uint@{boxing\_\-config\_\-property\_\-uint}!config@{config}}
+\paragraph[{boxing\_\-config\_\-property\_\-uint}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int boxing\_\-config\_\-property\_\-uint (const {\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key})}\hfill}
+\label{group__config_gae64eadea5e49a28c66fd69a01ea1c569}
+Get unsigned integer property.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Name. \item[\mbox{$\leftarrow$} {\em key}]Key. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+required unsigned integer property or NULL. 
+\end{DoxyReturn}
+\hypertarget{group__config_gaba83318eb9eab4e010742c737b1f5782}{
+\index{config@{config}!boxing\_\-config\_\-set\_\-property@{boxing\_\-config\_\-set\_\-property}}
+\index{boxing\_\-config\_\-set\_\-property@{boxing\_\-config\_\-set\_\-property}!config@{config}}
+\paragraph[{boxing\_\-config\_\-set\_\-property}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-config\_\-set\_\-property ({\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em group}, \/  const char $\ast$ {\em key}, \/  const char $\ast$ {\em value})}\hfill}
+\label{group__config_gaba83318eb9eab4e010742c737b1f5782}
+The function sets a string property. If the property group does not exist, a new group is created. If the property does not exist, a new property is added. If the property exists, its value is replaced by the new value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]boxing\_\-config pointer. \item[\mbox{$\leftarrow$} {\em group}]Group name. \item[\mbox{$\leftarrow$} {\em key}]Property key. \item[\mbox{$\leftarrow$} {\em value}]New property value. \end{DoxyParams}
+\hypertarget{group__config_gaae0ab5e0bb90813ced395324ca46f2b0}{
+\index{config@{config}!boxing\_\-config\_\-set\_\-property\_\-uint@{boxing\_\-config\_\-set\_\-property\_\-uint}}
+\index{boxing\_\-config\_\-set\_\-property\_\-uint@{boxing\_\-config\_\-set\_\-property\_\-uint}!config@{config}}
+\paragraph[{boxing\_\-config\_\-set\_\-property\_\-uint}]{\setlength{\rightskip}{0pt plus 5cm}void boxing\_\-config\_\-set\_\-property\_\-uint ({\bf boxing\_\-config} $\ast$ {\em config}, \/  const char $\ast$ {\em name}, \/  const char $\ast$ {\em key}, \/  unsigned int {\em value})}\hfill}
+\label{group__config_gaae0ab5e0bb90813ced395324ca46f2b0}
+The function sets a new unsigned integer property. If this property does not exist, a new one is added. If this property exists, it is replaced by a new value.
+
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em config}]Pointer to the boxing\_\-config structure. \item[\mbox{$\leftarrow$} {\em name}]Property name. \item[\mbox{$\leftarrow$} {\em key}]Property key. \item[\mbox{$\leftarrow$} {\em value}]New unsigned integer property value.\end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]consider optimizing \end{Desc}
