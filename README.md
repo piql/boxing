@@ -15,11 +15,11 @@ The library is released under GPLv3 licence for research and private use, for an
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Boxinglib&#xa0;&#xa0;&#xa0;<span class="tag"><span class="afsdoc">afsdoc</span></span></a></li>
-<li><a href="#sec-2">2. Features&#xa0;&#xa0;&#xa0;<span class="tag"><span class="afsdoc">afsdoc</span></span></a></li>
-<li><a href="#sec-3">3. Requirements&#xa0;&#xa0;&#xa0;<span class="tag"><span class="afsdoc">afsdoc</span></span></a></li>
+<li><a href="#sec-1">1. Boxinglib&#xa0;&#xa0;&#xa0;<span class="tag"><span class=""></span></span></a></li>
+<li><a href="#sec-2">2. Features&#xa0;&#xa0;&#xa0;<span class="tag"><span class=""></span></span></a></li>
+<li><a href="#sec-3">3. Requirements&#xa0;&#xa0;&#xa0;<span class="tag"><span class=""></span></span></a></li>
 <li><a href="#sec-4">4. Installation</a></li>
-<li><a href="#sec-5">5. Sample Applications&#xa0;&#xa0;&#xa0;<span class="tag"><span class="afsdoc">afsdoc</span></span></a></li>
+<li><a href="#sec-5">5. Sample Applications&#xa0;&#xa0;&#xa0;<span class="tag"><span class=""></span></span></a></li>
 <li><a href="#sec-6">6. Contact</a></li>
 </ul>
 </div>
