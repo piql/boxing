@@ -64,6 +64,12 @@ The following 3rd party libraries are included:
 - ldpc - see thirdparty/ldpc/COPYRIGHT
 - bch - GPLv2
 
+The following dependencies must be installed to compile:
+- autoconf
+- automake
+- libcheck
+- doxygen (for documentation)
+
 For detailed copyright and licencing description, inspect source code under thirdparty/.
 
 * Installation                                                       :gitdoc:
