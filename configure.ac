@@ -28,6 +28,11 @@ AC_PROG_RANLIB
 AC_PROG_LN_S
 
 # Checks for libraries.
+PKG_CHECK_MODULES([CHECK], [check >= 0.9.6])
+AC_CHECK_LIB(m, floor)
+AC_CHECK_LIB(rt, setitimer)
+AC_CHECK_LIB(pthread, pthread_create)
+AC_CHECK_LIB(subunit, subunit_test_start)
 
 # Checks for header files.
 AC_FUNC_ALLOCA
