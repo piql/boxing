@@ -156,7 +156,6 @@ nobase_include_HEADERS = \
     ../inc/boxing/graphics/genericframe.h \
     ../inc/boxing/graphics/referencebar.h \
     ../inc/boxing/graphics/label.h \
-    ../inc/boxing/graphics/component.h \
     ../inc/boxing/graphics/paintdevice.h \
     ../inc/boxing/graphics/border.h \
     ../inc/boxing/graphics/metadatabar.h \
